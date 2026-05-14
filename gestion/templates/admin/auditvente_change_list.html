@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+    {{ block.super }}
+
+    <div style="margin-top:20px; padding:15px; background:#f8f8f8; border-radius:8px;">
+        <h3>Statistiques des opérations</h3>
+        <ul>
+            <li><strong>INSERT :</strong> {{ summary.INSERT }}</li>
+            <li><strong>UPDATE :</strong> {{ summary.UPDATE }}</li>
+            <li><strong>DELETE :</strong> {{ summary.DELETE }}</li>
+        </ul>
+    </div>
+{% endblock %}
+</body>
+</html>
